@@ -33,10 +33,8 @@ class Home extends Component {
         <div className="home-page">
           <div className="home-container">
             <div className="home-caption-container">
-              <h1 className="home-caption">
-                {/* {"Track & \nConquer \nYour Backlog"} */}
-                {"Conquer \nYour Backlog"}
-              </h1>
+              <h1 className="home-caption">{"Conquer \nYour Backlog"}</h1>
+              <h2 className="home-sub-caption">No game left behind!</h2>
             </div>
             <div className="down-arrow-container">
               <div className="down-arrows">
@@ -52,6 +50,41 @@ class Home extends Component {
               <div className="desc-content">
                 <h1 className="desc-title desc-title-top">{`Track & Beat all the games in your library`}</h1>
                 <div className="desc-text-content"></div>
+              </div>
+            </div>
+          </div>
+          <div className="home-desc desc-violet home-desc-lg ">
+            <div className="home-desc-container">
+              <div className="desc-content">
+                <br />
+                <div className="center-container">
+                  <h1 className="our-platform-title">Our Platform</h1>
+                  <br />
+                </div>
+                <div className="spread-container">
+                  <br />
+                  <div className="spread-container-child">
+                    <i className="far fa-clock fa-7x"></i>
+                    <br />
+                    <h2 className="our-platform-section-title">
+                      Manage your gaming time more effeciently
+                    </h2>
+                  </div>
+                  <div className="spread-container-child">
+                    <i className="fas fa-gamepad fa-7x"></i>
+                    <br />
+                    <h2 className="our-platform-section-title">
+                      Stay up to date and add the latest and greatest games
+                    </h2>
+                  </div>
+                  <div className="spread-container-child">
+                    <i className="fas fa-dollar-sign fa-7x"></i>
+                    <br />
+                    <h2 className="our-platform-section-title">
+                      Don't let your hard-earned money go to waste
+                    </h2>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -71,7 +104,7 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          <div className="home-desc desc-violet desc-3">
+          {/* <div className="home-desc desc-violet desc-3">
             <div className="home-desc-container">
               <div className="desc-content">
                 <div className="desc-text-content">
@@ -84,7 +117,7 @@ class Home extends Component {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="home-desc desc-join">
             <div className="home-desc-container">
               <div className="desc-content desc-join-content">

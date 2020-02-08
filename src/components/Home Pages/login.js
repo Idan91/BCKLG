@@ -256,7 +256,6 @@ class login extends Component {
 
 login.propTypes = {
   loginUser: PropTypes.func.isRequired,
-  signInWithFacebook: PropTypes.func.isRequired,
   sendPasswordResetEmail: PropTypes.func.isRequired,
   user: PropTypes.object.isRequired,
   UI: PropTypes.object.isRequired

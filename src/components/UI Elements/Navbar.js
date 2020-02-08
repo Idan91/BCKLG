@@ -13,7 +13,6 @@ class Navbar extends Component {
     defaultClasses: "nav-link link",
     selectedClasses: "btn nav-selected",
     homePaths: ["/"],
-    // bcklgPaths: ["/add-game"],
     bcklgPaths: ["/account"],
     navbarType: null,
     popupVisible: false
@@ -201,7 +200,6 @@ class Navbar extends Component {
   };
 
   renderLogo = () => {
-    const logoWidth = 150;
     const navbarType = this.getNavbarType();
 
     return <Logo navbarType={navbarType} logoType="nav" />;

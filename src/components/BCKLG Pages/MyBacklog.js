@@ -173,7 +173,6 @@ class MyBacklog extends Component {
           handleToggleFilter={this.toggleFilter}
           handleEditGame={this.props.handleEditGame}
           handleDeleteGame={this.props.handleDeleteGame}
-          handleGetGameFromApi={this.props.handleGetGameFromApi}
           handleGetGameFromList={this.props.handleGetGameFromList}
         />
       </div>

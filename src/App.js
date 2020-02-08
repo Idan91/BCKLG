@@ -1,16 +1,12 @@
 import React, { Component } from "react";
-import {
-  HashRouter,
-  BrowserRouter as Router,
-  Route,
-  Switch
-} from "react-router-dom";
-import { ConnectedRouter } from "react-router-redux";
+import { HashRouter, Route, Switch } from "react-router-dom";
 // Redux
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import { SET_AUTHENTICATED } from "./redux/types";
 import { logoutUser, getUserData } from "./redux/actions/userActions";
+//Axios
+import axios from "axios";
 // Components
 import AuthRoute from "./util/AuthRoute";
 import jwtDecode from "jwt-decode";
@@ -23,7 +19,6 @@ import login from "./components/Home Pages/login";
 import bcklg from "./components/BCKLG Pages/BCKLG";
 import addGame from "./components/BCKLG Pages/AddGame";
 import account from "./components/BCKLG Pages/Account";
-import axios from "axios";
 
 axios.defaults.baseURL =
   "https://europe-west1-bcklg-6b059.cloudfunctions.net/api";

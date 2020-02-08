@@ -20,11 +20,7 @@ function scrollFn() {
   }
 }
 
-window.addEventListener("click", smoothScrollBackToTop);
-
-// function backToTop() {
-//   window.scrollTo(0, 0);
-// }
+backToTopBtn.addEventListener("click", smoothScrollBackToTop);
 
 function smoothScrollBackToTop() {
   const targetPosition = 0;

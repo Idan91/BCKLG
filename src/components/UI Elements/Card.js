@@ -5,8 +5,45 @@ class Card extends Component {
   state = {
     defaultClasses: "game-card",
     homeClasses: "game-card-home game-card-add-game",
-    addGameClasses: "game-card game-card-add-game"
+    addGameClasses: "game-card game-card-add-game",
+    addedStyle: "",
+    preAnimationStyle: "card-pre-entrance",
+    animationStyle: "card-entrance"
   };
+
+  _isMounted = false;
+
+  componentDidMount() {
+    this._isMounted = true;
+    if (
+      this._isMounted &&
+      this.props.currentPage === "My Backlog" &&
+      this.props.animate
+    ) {
+      this.setState({
+        addedStyle: this.state.preAnimationStyle
+      });
+      setTimeout(() => {
+        this.setState({
+          addedStyle: this.state.animationStyle
+        });
+        this._isMounted = false;
+        setTimeout(() => {
+          this.setState({
+            addedStyle: ""
+          });
+        }, 800);
+      }, 75 * this.props.delay);
+      if (this.props.numOfGames === this.props.delay) {
+        this.props.handleStopStartupAnimation();
+      }
+    }
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
+    console.log(this.props.animate);
+  }
 
   renderGameDetails = () => {
     let status = "";
@@ -88,7 +125,7 @@ class Card extends Component {
     return (
       <div
         key={this.props.game.name}
-        className={`${classes}`}
+        className={`${classes} ${this.state.addedStyle}`}
         onClick={this.props.handleClick}
         game={this.props.game}
         name={this.props.game.name}

@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 // Redux
 import { connect } from "react-redux";
 import store from "../../redux/store";
-
 import {
   logoutUser,
   updateGames,
@@ -26,39 +25,6 @@ class BCKLG extends Component {
     userData: "",
     fetchFailed: false
   };
-
-  /* #region  LIFE-CYCLE METHODS */
-  componentDidMount() {
-    this.startRawger();
-  }
-  /* #endregion */
-
-  /* #region  API METHODS */
-  startRawger = async () => {
-    const Rawger = require("rawger");
-    await Rawger({}).then(data => {
-      this.setState({
-        rawger: data
-      });
-    });
-  };
-
-  getGameFromApi = async i_GameSlug => {
-    const Rawger = require("rawger");
-    const { games } = await Rawger({});
-    const results = await games
-      .get(i_GameSlug)
-      .then(result => {
-        return result.get();
-      })
-      .then(data => {
-        return data.raw;
-      });
-
-    return results;
-  };
-
-  /* #endregion */
 
   /* #region  GAME METHODS */
   getGameFromList = i_Game => {
@@ -171,7 +137,6 @@ class BCKLG extends Component {
         handleAddGame={this.addGameToList}
         handleEditGame={this.editGame}
         handleDeleteGame={this.deleteGame}
-        handleGetGameFromApi={this.getGameFromApi}
         handleGetGameFromList={this.getGameFromList}
       />
     );

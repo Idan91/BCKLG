@@ -264,7 +264,7 @@ class GameFocus extends Component {
             className="btn link btn-gray close-game-focus"
             onClick={this.props.handleClose}
           >
-            <i class="fas fa-arrow-left"></i>
+            <i className="fas fa-arrow-left"></i>
           </button>
           <div className="focus-container">
             <div className="focus-box">

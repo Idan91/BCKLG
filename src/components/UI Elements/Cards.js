@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Card from "./Card";
 import GameFocus from "./GameFocus";
+import { getGameFromApi } from "../../model/Api";
 
 class Cards extends Component {
   state = {
@@ -30,14 +31,12 @@ class Cards extends Component {
     const cardsArr = this.props.games;
 
     const cardDisplay = cardsArr.map((item, index) => {
-      const delay = index + 1;
       return (
         <Card
           key={index}
           game={item}
           handleClick={this.handleCardClick}
           currentPage={this.props.currentPage}
-          delay={delay}
         />
       );
     });
@@ -58,14 +57,13 @@ class Cards extends Component {
             currentPage={this.props.currentPage}
             handleEditGame={this.props.handleEditGame}
             handleDeleteGame={this.props.handleDeleteGame}
-            handleGetGameFromApi={this.props.handleGetGameFromApi}
             handleClose={this.hideGameFocus}
           />
         )
       });
     } else {
       try {
-        this.props.handleGetGameFromApi(i_Game).then(game => {
+        getGameFromApi(i_Game).then(game => {
           this.setState({
             gameFocusVisible: true,
             gameForFocus: game,
@@ -74,7 +72,6 @@ class Cards extends Component {
                 game={game}
                 currentPage={this.props.parentComponent}
                 handleAddGame={this.props.handleAddGame}
-                handleGetGameFromApi={this.props.handleGetGameFromApi}
                 handleSearchVisibility={this.props.handleSearchVisibility}
                 handleClose={this.hideGameFocus}
               />

@@ -74,7 +74,6 @@ class AddGame extends Component {
               parentComponent={"Add Game"}
               currentPage={"Add Game"}
               handleAddGame={this.addGameToList}
-              handleGetGameFromApi={getGameFromApi}
               handleGetGameFromList={this.props.handleGetGameFromList}
               handleSearchVisibility={this.toggleSearchVisibility}
             />
