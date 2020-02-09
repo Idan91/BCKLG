@@ -193,7 +193,6 @@ class AddGame extends Component {
           }
 
           this.props.updateGames(username, myGameList);
-          window.alert(`${game.name} has been added to your backlog`);
         })
         .catch(err => {
           console.log(err);

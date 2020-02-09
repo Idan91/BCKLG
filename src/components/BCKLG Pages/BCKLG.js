@@ -114,18 +114,14 @@ class BCKLG extends Component {
   };
 
   renderBacklog = () => {
-    const { user, games, loading, authenticated } = loadUserDataFromProps(
-      this.props
-    );
+    const { games, loading, authenticated } = loadUserDataFromProps(this.props);
 
     setTimeout(() => {
-      if (!user) {
+      const { user, authenticated } = loadUserDataFromProps(this.props);
+      if (!user || !authenticated) {
         window.alert(
           "Could not authenticate/retrieve user data. Please log in again"
         );
-        this.setState({
-          fetchFailed: true
-        });
         store.dispatch(logoutUser());
       }
     }, 4500);
