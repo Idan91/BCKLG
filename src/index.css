@@ -1073,7 +1073,7 @@ footer .footer-text-container {
   margin-top: -1px;
   padding: 0px;
   text-align: center;
-  padding: 0px 0px 2px;
+  padding: -100px;
 }
 
 .game-card-add-game .game-detail-container {
@@ -1120,6 +1120,7 @@ footer .footer-text-container {
   position: sticky;
   bottom: 0%;
   text-align: center;
+  margin-top: -1px;
   /* border-radius: 0px 0px 10px 10px; */
 }
 
@@ -1309,6 +1310,10 @@ footer .footer-text-container {
   max-width: 180px;
   padding: 2px 8px;
   border: 1px solid #555555;
+}
+
+.focus-button-selected {
+  border: 1px solid white;
 }
 
 .focus-button:hover {
@@ -1561,6 +1566,17 @@ footer .footer-text-container {
   animation: spin 1s linear infinite;
 }
 
+.loader-container-bcklg {
+  padding-top: 40px;
+}
+
+.loader-container-bcklg .loader {
+  width: 30px;
+  height: 30px;
+  border: 14px solid var(--second-orange);
+  border-top: 14px solid var(--main-orange);
+}
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -1766,7 +1782,7 @@ footer .footer-text-container {
     position: sticky;
     bottom: 0%;
     text-align: center;
-    margin-top: 20px;
+    margin-top: -4px;
     /* border-radius: 0px 0px 10px 10px; */
   }
 
@@ -1907,6 +1923,10 @@ footer .footer-text-container {
 
   .btn {
     font-size: 14.5px;
+  }
+
+  .btn-sml {
+    font-size: 12px;
   }
 
   .btn-filter {
@@ -2107,7 +2127,6 @@ footer .footer-text-container {
     min-width: max-content;
     width: 115px;
     max-width: 150px;
-    border: 1px solid #555555;
   }
 
   .home-desc-lg .desc-content {
@@ -2202,6 +2221,7 @@ footer .footer-text-container {
 
   .game-detail-container {
     margin-top: -13px;
+    transform: translateY(-5px);
   }
 
   .game-detail {
@@ -2214,11 +2234,11 @@ footer .footer-text-container {
 
   .platform {
     width: 100%;
-    height: 25px;
+    height: 26px;
     position: sticky;
     bottom: 0%;
     text-align: center;
-    margin-top: 20px;
+    margin-top: -10px;
     /* border-radius: 0px 0px 10px 10px; */
   }
 
@@ -2247,6 +2267,10 @@ footer .footer-text-container {
 
   .btn {
     font-size: 14px;
+  }
+
+  .btn-sml {
+    font-size: 11px;
   }
 
   .home-caption {
@@ -2313,7 +2337,10 @@ footer .footer-text-container {
     min-width: max-content;
     width: 65px;
     max-width: 90px;
-    border: 1px solid #555555;
+  }
+
+  .focus-button-selected {
+    border: 1px solid white;
   }
 }
 
@@ -2377,11 +2404,11 @@ footer .footer-text-container {
 
   .platform {
     width: 100%;
-    height: 20px;
+    height: 22px;
     position: sticky;
     bottom: 0%;
     text-align: center;
-    margin-top: 20px;
+    margin-top: -11px;
     /* border-radius: 0px 0px 10px 10px; */
   }
 
@@ -2421,6 +2448,10 @@ footer .footer-text-container {
 
   .btn {
     padding: 0.25em 1em;
+    font-size: 13px;
+  }
+
+  .btn-sml {
     font-size: 12px;
   }
 
@@ -2500,7 +2531,10 @@ footer .footer-text-container {
   }
 
   .btn {
-    padding: 0.2em 0.75em;
+    font-size: 13px;
+  }
+
+  .btn-sml {
     font-size: 11px;
   }
 
@@ -2622,8 +2656,8 @@ footer .footer-text-container {
     width: 80px;
   }
 
-  .btn {
-    font-size: 10px;
+  .btn-sml {
+    font-size: 11px;
   }
 
   .nav-item {
@@ -2944,7 +2978,7 @@ footer .footer-text-container {
 
   .platform {
     width: 100%;
-    height: 15px;
+    height: 20px;
     position: sticky;
     bottom: 0%;
     text-align: center;
@@ -2957,7 +2991,7 @@ footer .footer-text-container {
     top: 50%;
     transform: translate(0%, -50%);
     font-weight: bold;
-    font-size: 9px;
+    font-size: 10px;
     letter-spacing: 0.5px;
     overflow: hidden;
   }
@@ -2988,7 +3022,7 @@ footer .footer-text-container {
   }
 
   .game-detail-container {
-    margin-top: -19px;
+    margin-top: -16px;
     padding: 0px;
     text-align: center;
     padding: 0px 0px 1px;
@@ -3139,7 +3173,6 @@ footer .footer-text-container {
     min-width: max-content;
     width: 65px;
     max-width: 90px;
-    border: 1px solid #555555;
   }
 
   .focus-container .platform-container {
@@ -3223,6 +3256,11 @@ footer .footer-text-container {
 
   .btn {
     font-size: 12px;
+  }
+
+  .btn-sml {
+    margin-top: 20px;
+    font-size: 10px;
   }
 
   .nav .btn {

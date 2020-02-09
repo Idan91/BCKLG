@@ -147,7 +147,7 @@ class BCKLG extends Component {
           <div className="content">
             <br />
             <br />
-            <div className="loader-container">
+            <div className="loader-container loader-container-bcklg">
               {loading && <div className="loader" />}
             </div>
           </div>
