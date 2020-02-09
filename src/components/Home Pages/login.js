@@ -191,16 +191,6 @@ class login extends Component {
     );
   };
 
-  // handleFbSignIn = () => {
-  //   this.props.signInWithFacebook(this.props.history);
-  // };
-
-  // handleEmailSignIn = () => {
-  //   this.setState({
-  //     emailSignIn: true
-  //   });
-  // };
-
   renderSignInMethods = () => {
     return (
       <React.Fragment>

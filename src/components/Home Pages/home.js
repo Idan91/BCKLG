@@ -104,20 +104,6 @@ class Home extends Component {
               </div>
             </div>
           </div>
-          {/* <div className="home-desc desc-violet desc-3">
-            <div className="home-desc-container">
-              <div className="desc-content">
-                <div className="desc-text-content">
-                  <h1 className="desc-title">{`Current & Connected`}</h1>
-                  <p className="desc-body">
-                    Powered by the RAWG, the largest open video games database,
-                    BCKLG provides you the option to add the latest and greatest
-                    to your backlog until you eventually beat them.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div> */}
           <div className="home-desc desc-join">
             <div className="home-desc-container">
               <div className="desc-content desc-join-content">

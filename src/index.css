@@ -29,15 +29,6 @@
   --hamburger-spacing: 10px;
 }
 
-/* * {
-  font-family: "Roboto";
-  color: white;
-} */
-/* 
-html {
-  scroll-behavior: smooth;
-} */
-
 #root {
   font-family: "Roboto";
   color: white;
@@ -120,26 +111,6 @@ code {
   }
 }
 
-/* @keyframes zoomOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-}
-
-@keyframes zoomOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    transform: scale3d(0.3, 0.3, 0.3);
-  }
-} */
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -187,7 +158,6 @@ code {
   margin: 0;
   width: 100%;
   height: max-content;
-  /* background-color: white; */
   position: relative;
 }
 
@@ -198,24 +168,6 @@ code {
   bottom: 0;
   right: 0;
 }
-
-.sticky-anchor {
-}
-
-/* .inner-body {
-  margin-top: 15px;
-  margin-right: 90px;
-  margin-left: 90px;
-} */
-
-/* .logo {
-  font-family: "Bebas";
-  font-weight: bolder;
-  color: var(--main-orange);
-  transform: translate(0%, -20%);
-  font-size: 35px;
-  transition: all 0.2s;
-} */
 
 svg:hover {
   fill: var(--second-orange);
@@ -264,15 +216,12 @@ svg:hover {
 
 .main {
   margin-top: 10px;
-  /* height: 66vh; */
   height: calc((var(--single-page-height)) - (var(--footer-height)));
   overflow: hidden;
-  /* position: relative; */
 }
 
 .content {
   height: 100%;
-  /* overflow: scroll; */
   overflow: hidden;
 }
 
@@ -425,16 +374,6 @@ svg:hover {
 .desc-text-content {
   position: relative;
   top: 5%;
-  /* background-color: yellow; */
-  /* position: absolute;
-  padding-left: 50px;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  width: 70%;
-  height: 100%;
-  margin-top: 0px;
-  overflow: hidden; */
 }
 
 .desc-img {
@@ -693,7 +632,6 @@ svg:hover {
   width: 235px;
   height: 40px;
   margin-bottom: 12px;
-  /* padding: 1px; */
   padding: 1px 4px 1px 20px;
   text-align: left;
   justify-content: left;
@@ -741,7 +679,6 @@ svg:hover {
 }
 
 .btn-filter {
-  /* margin: 10px 15px 0px 15px; */
   margin: 0px 15px 0px 15px;
 }
 
@@ -776,10 +713,7 @@ svg:hover {
 
 .nav {
   margin: var(--navbar-vertical-margin) 70px var(--navbar-vertical-margin) 70px;
-  /* margin-top: 20px;
-  margin-right: 70px;
-  margin-left: 70px;
-  margin-bottom: 15px; */
+
   position: sticky;
   display: flex;
   justify-content: space-between;
@@ -865,8 +799,6 @@ svg:hover {
   text-align: center;
   display: inline-flex;
   width: auto;
-  /* font-size: 40px; */
-  /* margin: 25px 100px 15px 100px; */
   font-size: 35px;
   color: var(--third-orange);
   margin: 0px 100px 20px 100px;
@@ -923,7 +855,6 @@ footer {
   bottom: 0%;
   transform: translate(-1%, 0%);
   margin-bottom: 0px;
-  /* position: relative; */
   font-size: 11px;
   height: var(--footer-height);
   letter-spacing: 5px;
@@ -960,7 +891,7 @@ footer .footer-text-container {
   text-align: center;
   justify-content: space-between;
   height: auto;
-  /* overflow: visible; */
+
   overflow: visible;
 }
 
@@ -1050,7 +981,6 @@ footer .footer-text-container {
   margin-bottom: 0px;
   width: 100%;
   padding: 0px;
-  /* overflow: auto; */
 }
 
 .game-title {
@@ -1121,7 +1051,6 @@ footer .footer-text-container {
   bottom: 0%;
   text-align: center;
   margin-top: -1px;
-  /* border-radius: 0px 0px 10px 10px; */
 }
 
 .platform-name {
@@ -1251,25 +1180,30 @@ footer .footer-text-container {
 
 .focus-container {
   position: absolute;
-  width: max-content;
-  overflow: hidden;
+  width: 100%;
   left: 50%;
-  overflow-y: visible;
   transform: translate(-50%, -5%);
   height: 450px;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .focus-box {
   display: inline-flex;
-  height: var(--card-height);
-  overflow-y: visible;
   margin-top: 10px;
+  overflow-y: visible;
+}
+
+.focus-box .card-container {
+  margin-top: 1px;
+  overflow-y: visible;
 }
 
 .card-container-focus {
   margin-top: 0px;
   display: inline-block;
   text-align: left;
+  overflow-y: visible;
 }
 
 .card-container-home {
@@ -1278,19 +1212,25 @@ footer .footer-text-container {
   top: 0%;
   left: 75%;
   width: var(--card-width);
-  /* transform: translate(0px, -51%); */
   margin-top: 0px;
   margin-bottom: 0px;
-  /* height: max-content; */
   height: 100%;
 }
 
 .focus-details {
+  overflow-x: hidden;
+  overflow-y: visible;
   display: inline-block;
-  height: var(--card-height);
+  height: 80vh;
   text-align: left;
-  width: max-content;
+  width: 70%;
   margin-left: 10px;
+}
+
+.focus-platform-container {
+  position: relative;
+  height: max-content;
+  overflow: hidden;
 }
 
 .focus-header {
@@ -1306,19 +1246,25 @@ footer .footer-text-container {
   color: white;
   width: auto;
   margin-bottom: 2px;
+  margin-right: 7px;
+  font-size: 16px;
+  font-weight: bold;
   min-width: 110px;
   max-width: 180px;
-  padding: 2px 8px;
-  border: 1px solid #555555;
+  padding: 5px 12px;
+  border: 2px solid #555555;
 }
 
 .focus-button-selected {
   border: 1px solid white;
 }
 
-.focus-button:hover {
+.focus-button-editable {
+}
+
+.focus-button-editable:hover {
   background-color: var(--main-orange);
-  border: 1px solid white;
+  border: 2px solid white;
 }
 
 .focus-button-selected {
@@ -1326,7 +1272,7 @@ footer .footer-text-container {
 }
 
 .focus-status-container {
-  max-height: 79px;
+  max-height: 80px;
   margin-bottom: 15px;
 }
 
@@ -1386,165 +1332,6 @@ footer .footer-text-container {
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s;
-}
-
-.playstation4 {
-  background-color: #003087;
-}
-
-.ps-vita {
-  background-color: #003087;
-}
-
-.playstation3 {
-  background-color: #294983;
-}
-
-.psp {
-  background-color: #002b6c;
-}
-
-.playstation2 {
-  background-color: #002b6c;
-}
-
-.playstation1 {
-  color: #292929;
-  background-color: #a4a6a6;
-}
-
-.xbox-one {
-  background-color: #0c760e;
-}
-
-.xbox360 {
-  background-color: #2ca243;
-}
-
-.xbox-old {
-  background-color: #004a01;
-}
-
-.nintendo-switch {
-  background-color: #d31323;
-}
-
-.nintendo-3ds {
-  background-color: #d80517;
-}
-
-.nintendo-64 {
-  color: #0124a6;
-  background-color: #069330;
-}
-
-.gamecube {
-  color: #eeeeee;
-  background-color: #5642ae;
-}
-
-.game-boy {
-  color: #80922f;
-  background-color: #e7dfdb;
-}
-
-.nes {
-  color: rgb(208, 32, 26);
-  background-color: #dbdadd;
-}
-
-.wii-u {
-  color: rgb(245, 245, 245);
-  background-color: #3992b0;
-}
-
-.wii {
-  color: #3992b0;
-  background-color: rgb(245, 245, 245);
-}
-
-.game-boy-advance {
-  color: #d5d5d5;
-  background-color: #7061de;
-}
-
-.game-boy-color {
-  color: #ff89b4;
-  background-color: #541784;
-}
-
-.snes {
-  color: #4f43ae;
-  background-color: #b5b6e4;
-}
-
-.neogeo {
-  color: #c1a253;
-  background-color: #101010;
-}
-
-.atari-flashback {
-  color: #ee1b1b;
-  background-color: #101010;
-}
-
-.atari-st {
-  background-color: #c9c9c9;
-  color: #101010;
-}
-
-.atari-5200 {
-  color: #c9c9c9;
-  background-color: #101010;
-}
-
-.atari-2600 {
-  color: #ee1b1b;
-  background-color: #101010;
-}
-
-.atari-8-bit {
-  color: #b30000;
-  background-color: #dfdfdf;
-}
-
-.commodore-amiga {
-  color: #003693;
-  background-color: #dfdfdf;
-}
-
-.apple-ii {
-  color: #413e18;
-  background-color: #e5dfc7;
-}
-
-.game-gear {
-  color: #1e72c6;
-  background-color: #151617;
-}
-
-.genesis {
-  color: #4276de;
-  background-color: #0e121a;
-}
-
-.pc {
-  background-color: #3b2a43;
-}
-
-.ios {
-  color: #222222;
-  background-color: #e4e4e4;
-}
-
-.macos {
-  color: #818596;
-  background-color: #c1c1c1;
-}
-
-.android {
-  color: #222222;
-  background-color: #3ddc84;
 }
 
 .loader-container {
@@ -1739,31 +1526,9 @@ footer .footer-text-container {
 
 @media screen and (max-width: 1550px) {
   .game-card {
-    /* display: inline-block; */
     width: calc(var(--card-width) * var(--sd-resolution-factor));
     height: calc(var(--card-height) * var(--sd-resolution-factor));
     margin: 0px 12px 25px 12px;
-    /* margin: 0px 15px;
-    margin-bottom: 30px;
-    border: 1px solid var(--card-border);
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 32px 35px 2px rgba(0, 0, 0, 0.19);
-    -moz-box-shadow: 0px 32px 35px 2px rgba(0, 0, 0, 0.19);
-    box-shadow: 0px 32px 35px 2px rgba(0, 0, 0, 0.19);
-    transition: all 0.2s;
-    background-color: var(--card-height);
-    background: -webkit-linear-gradient(
-      var(--card-gradient-angle),
-      var(--card-color-A),
-      var(--card-color-B)
-    );
-    background: linear-gradient(
-      var(--card-gradient-angle),
-      var(--card-color-A),
-      var(--card-color-B)
-    );
-    z-index: 1;
-    overflow: hidden; */
   }
 
   .game-detail-line {
@@ -1783,7 +1548,6 @@ footer .footer-text-container {
     bottom: 0%;
     text-align: center;
     margin-top: -4px;
-    /* border-radius: 0px 0px 10px 10px; */
   }
 
   .platform-name {
@@ -1802,13 +1566,6 @@ footer .footer-text-container {
 
   .img-container {
     height: calc(150px * var(--sd-resolution-factor));
-    /* position: relative;
-    border-radius: 10px 10px 0 0;
-    margin-bottom: -1px;
-    width: 100%;
-    background-color: white;
-    overflow: hidden;
-    border-bottom: 1px solid var(--card-border); */
   }
 
   .game-card-add-game {
@@ -1835,14 +1592,7 @@ footer .footer-text-container {
   }
 
   .card-container {
-    /* box-sizing: padding-box;
-    -moz-box-sizing: padding-box;
-    -webkit-box-sizing: padding-box; */
     padding-bottom: 35px;
-    /* text-align: center;
-    justify-content: space-between;
-    height: auto;
-    overflow: visible; */
   }
 
   .platform-container {
@@ -1860,7 +1610,6 @@ footer .footer-text-container {
     position: sticky;
     bottom: 0%;
     text-align: center;
-    /* border-radius: 0px 0px 10px 10px; */
   }
 
   .platform-name {
@@ -1894,6 +1643,17 @@ footer .footer-text-container {
     height: 26px;
   }
 
+  .focus-button {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-right: 7px;
+    font-size: 14px;
+    min-width: 80px;
+    width: 80px;
+    max-width: 180px;
+    padding: 4px 5px;
+  }
+
   .focus-header {
     font-size: 20px;
     color: #b5b4d0;
@@ -1901,18 +1661,6 @@ footer .footer-text-container {
 
   .stat-bar {
     font-size: 14px;
-    /* display: inline-block;
-    padding: 0.3em 1.2em;
-    margin: 10px 5px;
-    border-radius: 2em;
-    box-sizing: border-box;
-    text-decoration: none;
-    text-align: center;
-    transition: all 0.2s;
-    font-weight: bold;
-    width: auto;
-    background-color: transparent;
-    border: 1px solid var(--sub-orange); */
   }
 
   .nav-item {
@@ -2009,15 +1757,8 @@ footer .footer-text-container {
   }
 
   footer {
-    /* width: 102%;
-    transform: translate(-1%, 0%);
-    margin-bottom: 0px;
-    position: relative; */
     font-size: 10px;
     letter-spacing: 4.75px;
-    /* text-transform: uppercase;
-    text-align: center;
-    align-items: center; */
   }
 
   .signup-container {
@@ -2239,7 +1980,6 @@ footer .footer-text-container {
     bottom: 0%;
     text-align: center;
     margin-top: -10px;
-    /* border-radius: 0px 0px 10px 10px; */
   }
 
   .platform-name {
@@ -2258,10 +1998,8 @@ footer .footer-text-container {
     top: 0%;
     left: 68%;
     width: var(--card-width);
-    /* transform: translate(0px, -51%); */
     margin-top: 0px;
     margin-bottom: 0px;
-    /* height: max-content; */
     height: 100%;
   }
 
@@ -2383,17 +2121,6 @@ footer .footer-text-container {
     font-size: 12px;
     margin: 5px 2px;
     padding: 0.25em 1em;
-    /* display: inline-block;
-    margin: 10px 5px;
-    border-radius: 2em;
-    box-sizing: border-box;
-    text-decoration: none;
-    text-align: center;
-    transition: all 0.2s;
-    font-weight: bold;
-    width: auto;
-    background-color: transparent;
-    border: 1px solid var(--sub-orange); */
   }
 
   .game-card {
@@ -2409,7 +2136,6 @@ footer .footer-text-container {
     bottom: 0%;
     text-align: center;
     margin-top: -11px;
-    /* border-radius: 0px 0px 10px 10px; */
   }
 
   .platform-name {
@@ -2475,6 +2201,11 @@ footer .footer-text-container {
     font-size: 12px;
     margin: 6px 3px 10px 3px;
   }
+
+  .focus-button {
+    font-size: 12px;
+    margin-bottom: 0px;
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -2491,17 +2222,6 @@ footer .footer-text-container {
     font-size: 11px;
     margin: 4px 2px;
     padding: 0.2em 0.8em;
-    /* display: inline-block;
-    margin: 10px 5px;
-    border-radius: 2em;
-    box-sizing: border-box;
-    text-decoration: none;
-    text-align: center;
-    transition: all 0.2s;
-    font-weight: bold;
-    width: auto;
-    background-color: transparent;
-    border: 1px solid var(--sub-orange); */
   }
 
   .stat {
@@ -2552,9 +2272,7 @@ footer .footer-text-container {
     font-size: 9px;
     letter-spacing: 1.5px;
   }
-  /* }
 
-@media screen and (max-width: 615px) { */
   .page-body {
     overflow-x: hidden;
   }
@@ -2562,17 +2280,6 @@ footer .footer-text-container {
     font-size: 10px;
     margin: 4px 2px;
     padding: 0.15em 0.7em;
-    /* display: inline-block;
-    margin: 10px 5px;
-    border-radius: 2em;
-    box-sizing: border-box;
-    text-decoration: none;
-    text-align: center;
-    transition: all 0.2s;
-    font-weight: bold;
-    width: auto;
-    background-color: transparent;
-    border: 1px solid var(--sub-orange); */
   }
 
   .stat {
@@ -2600,7 +2307,6 @@ footer .footer-text-container {
     bottom: 0%;
     text-align: center;
     margin-top: 20px;
-    /* border-radius: 0px 0px 10px 10px; */
   }
 
   .platform-name {
@@ -2942,6 +2648,7 @@ footer .footer-text-container {
     font-size: 9.7px;
     margin: 2px 1px;
     padding: 0.38em 0.5em;
+    display: none;
   }
 
   .stat {
@@ -2966,79 +2673,172 @@ footer .footer-text-container {
     margin: 4px 2px 8px 2px;
   }
 
-  .game-card {
-    width: 160px;
-    height: 182px;
-    margin: 0px 12px 20px 12px;
-  }
-
   .game-card:hover {
     transform: scale(1);
   }
 
+  .game-card {
+    display: inline-block;
+    width: var(--card-width);
+    height: var(--card-height);
+    margin: 0px 15px;
+    margin-bottom: 30px;
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 32px 35px 2px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0px 32px 35px 2px rgba(0, 0, 0, 0.19);
+    box-shadow: 0px 32px 35px 2px rgba(0, 0, 0, 0.19);
+    transition: all 0.2s;
+    background-color: var(--card-height);
+    background: -webkit-linear-gradient(
+      var(--card-gradient-angle),
+      var(--card-color-A),
+      var(--card-color-B)
+    );
+    background: linear-gradient(
+      var(--card-gradient-angle),
+      var(--card-color-A),
+      var(--card-color-B)
+    );
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .game-card-home {
+    width: var(--card-width);
+    height: var(--card-height);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 32px 35px 2px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0px 32px 35px 2px rgba(0, 0, 0, 0.19);
+    box-shadow: 0px 32px 35px 2px rgba(0, 0, 0, 0.19);
+    transition: all 0.2s;
+    background-color: var(--card-height);
+    background: -webkit-linear-gradient(
+      var(--card-gradient-angle),
+      var(--card-color-A),
+      var(--card-color-B)
+    );
+    background: linear-gradient(
+      var(--card-gradient-angle),
+      var(--card-color-A),
+      var(--card-color-B)
+    );
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+
+  .game-card-add-game {
+    height: 285px;
+  }
+
+  .img-container {
+    position: relative;
+    height: 150px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: -1px;
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    border-bottom: 1px solid var(--card-border);
+  }
+
+  .game-img {
+    width: 100%;
+    transform: scale(1.5) translate(0%, 10%);
+  }
+
+  .title-container {
+    display: table;
+    position: relative;
+    margin-top: 9px;
+    height: 50px;
+    margin-bottom: 0px;
+    width: 100%;
+    padding: 0px;
+  }
+
+  .game-title {
+    position: relative;
+    color: rgb(15, 15, 15);
+    margin-top: 0px;
+    padding: 4px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 17px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .game-detail-line {
+    margin-bottom: 2px;
+  }
+
+  .game-detail-container {
+    margin-top: -1px;
+    padding: 0px;
+    text-align: center;
+    padding: -100px;
+  }
+
+  .game-card-add-game .game-detail-container {
+    margin-top: 5px;
+  }
+
+  .game-card-add-game .game-detail-line {
+    margin-bottom: 0px;
+  }
+
+  .game-detail {
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    margin: 1px 4px 1px 4px;
+    color: #1d234d;
+  }
+
+  .game-detail-label {
+    display: inline block;
+  }
+
+  .game-detail-value {
+    font-weight: bold;
+    display: inline block;
+  }
+
+  .game-status {
+    display: inline block;
+  }
+
+  .platform-container {
+    display: inline-block;
+    width: auto;
+
+    max-height: 78px;
+    max-width: 900px;
+    line-height: 0px;
+  }
+
   .platform {
     width: 100%;
-    height: 20px;
+    height: var(--platform-height);
     position: sticky;
     bottom: 0%;
     text-align: center;
-    margin-top: 20px;
-    /* border-radius: 0px 0px 10px 10px; */
+    margin-top: -1px;
   }
 
   .platform-name {
     position: relative;
     top: 50%;
     transform: translate(0%, -50%);
-    font-weight: bold;
-    font-size: 10px;
-    letter-spacing: 0.5px;
-    overflow: hidden;
-  }
-
-  .img-container {
-    height: 81px;
-    margin-bottom: 0px;
-  }
-
-  .game-card-add-game {
-    height: 174px;
-  }
-
-  .game-title {
-    transform: translate(0, -8px);
-    font-size: 11px;
-    letter-spacing: -0.2px;
-  }
-
-  .focus-header {
+    font-weight: bolder;
     font-size: 15px;
-  }
-
-  .platform-container {
-    width: 100%;
-    height: max-content;
-    overflow: auto;
-  }
-
-  .game-detail-container {
-    margin-top: -16px;
-    padding: 0px;
-    text-align: center;
-    padding: 0px 0px 1px;
-  }
-
-  .game-detail-container br {
-    display: none;
-  }
-
-  .game-detail-line {
-    margin-bottom: -3px;
-  }
-
-  .game-detail {
-    font-size: 9.5px;
-    margin: 0px 3px 0px 3px;
+    letter-spacing: 0.75px;
+    overflow: hidden;
   }
 
   footer {
@@ -3100,9 +2900,13 @@ footer .footer-text-container {
     height: 140px;
   }
 
+  .content {
+    height: 100%;
+    min-height: max-content;
+  }
+
   .focus-outer-container {
     position: relative;
-    height: max-content;
     width: 100%;
     display: block;
     overflow: visible;
@@ -3114,9 +2918,11 @@ footer .footer-text-container {
     display: block;
     width: 90%;
     min-height: max-content;
-    height: 60vh;
+    height: 85vh;
+    max-height: 90vh;
     left: 50%;
     transform: translate(-50%, -8%);
+    margin-top: 20px;
   }
 
   .focus-container .card-container {
@@ -3128,11 +2934,11 @@ footer .footer-text-container {
 
   .focus-details {
     position: absolute;
-    /* padding: 2px 20px; */
+    padding: 1px;
     width: 85%;
     left: 50%;
-    top: 250px;
-    transform: translate(-50%, 0) scale(1.3);
+    top: 345px;
+    transform: translate(-50%, 0) scale(1.12);
     margin-left: 0px;
     height: max-content;
   }
@@ -3149,7 +2955,6 @@ footer .footer-text-container {
     width: 50px;
     height: 25px;
     font-size: 10px;
-    /* margin-left: -1px; */
     margin-left: -4px;
     transform: translate(0, -0.5px);
   }
@@ -3173,6 +2978,12 @@ footer .footer-text-container {
     min-width: max-content;
     width: 65px;
     max-width: 90px;
+    font-size: 10px;
+    border: 1px solid #555555;
+  }
+
+  .focus-button-selected {
+    border: 1px solid white;
   }
 
   .focus-container .platform-container {
@@ -3350,4 +3161,163 @@ footer .footer-text-container {
     margin-top: -38px;
     transform: scale(0.35);
   }
+}
+
+.playstation4 {
+  background-color: #003087;
+}
+
+.ps-vita {
+  background-color: #003087;
+}
+
+.playstation3 {
+  background-color: #294983;
+}
+
+.psp {
+  background-color: #002b6c;
+}
+
+.playstation2 {
+  background-color: #002b6c;
+}
+
+.playstation1 {
+  color: #292929;
+  background-color: #a4a6a6;
+}
+
+.xbox-one {
+  background-color: #0c760e;
+}
+
+.xbox360 {
+  background-color: #2ca243;
+}
+
+.xbox-old {
+  background-color: #004a01;
+}
+
+.nintendo-switch {
+  background-color: #d31323;
+}
+
+.nintendo-3ds {
+  background-color: #d80517;
+}
+
+.nintendo-64 {
+  color: #0124a6;
+  background-color: #069330;
+}
+
+.gamecube {
+  color: #eeeeee;
+  background-color: #5642ae;
+}
+
+.game-boy {
+  color: #80922f;
+  background-color: #e7dfdb;
+}
+
+.nes {
+  color: rgb(208, 32, 26);
+  background-color: #dbdadd;
+}
+
+.wii-u {
+  color: rgb(245, 245, 245);
+  background-color: #3992b0;
+}
+
+.wii {
+  color: #3992b0;
+  background-color: rgb(245, 245, 245);
+}
+
+.game-boy-advance {
+  color: #d5d5d5;
+  background-color: #7061de;
+}
+
+.game-boy-color {
+  color: #ff89b4;
+  background-color: #541784;
+}
+
+.snes {
+  color: #4f43ae;
+  background-color: #b5b6e4;
+}
+
+.neogeo {
+  color: #c1a253;
+  background-color: #101010;
+}
+
+.atari-flashback {
+  color: #ee1b1b;
+  background-color: #101010;
+}
+
+.atari-st {
+  background-color: #c9c9c9;
+  color: #101010;
+}
+
+.atari-5200 {
+  color: #c9c9c9;
+  background-color: #101010;
+}
+
+.atari-2600 {
+  color: #ee1b1b;
+  background-color: #101010;
+}
+
+.atari-8-bit {
+  color: #b30000;
+  background-color: #dfdfdf;
+}
+
+.commodore-amiga {
+  color: #003693;
+  background-color: #dfdfdf;
+}
+
+.apple-ii {
+  color: #413e18;
+  background-color: #e5dfc7;
+}
+
+.game-gear {
+  color: #1e72c6;
+  background-color: #151617;
+}
+
+.genesis {
+  color: #4276de;
+  background-color: #0e121a;
+}
+
+.pc {
+  background-color: #3b2a43;
+}
+
+.ios {
+  color: #222222;
+  background-color: #e4e4e4;
+}
+
+.macos {
+  color: #818596;
+  background-color: #c1c1c1;
+}
+
+.android {
+  color: #222222;
+  background-color: #3ddc84;
 }

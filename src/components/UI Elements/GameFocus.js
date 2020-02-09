@@ -5,9 +5,10 @@ import { getStatusTypes } from "../../model/Status";
 class GameFocus extends Component {
   state = {
     selectedPlatform: "",
-    platformButtonClasses: "btn-search link preset focus-button focus-platform",
     selectedStatus: "",
-    statusButtonClasses: "btn-search link preset focus-button focus-status",
+
+    platformButtonClasses: "focus-button focus-platform",
+    statusButtonClasses: "focus-button focus-status",
     selectedButtonClass: "focus-button-selected",
     editGame: false
   };
@@ -86,7 +87,8 @@ class GameFocus extends Component {
               selected={isSelected}
               className={`${this.state.platformButtonClasses} ${
                 platform.platform.slug
-              } ${isSelected && this.state.selectedButtonClass}`}
+              } link focus-button-editable  ${isSelected &&
+                this.state.selectedButtonClass}`}
               onClick={this.handleOptionChange}
             >
               {platform.platform.name}
@@ -135,7 +137,9 @@ class GameFocus extends Component {
             key={index}
             value={status}
             selected={isSelected}
-            className={`${this.state.statusButtonClasses} ${isSelected &&
+            className={`${
+              this.state.statusButtonClasses
+            } link focus-button-editable ${isSelected &&
               this.state.selectedButtonClass}`}
             onClick={this.handleOptionChange}
           >

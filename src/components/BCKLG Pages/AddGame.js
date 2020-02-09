@@ -172,7 +172,7 @@ class AddGame extends Component {
     if (gameExists) {
       alert("Game already exits!");
     } else {
-      let game = await getGameFromApi(i_Game)
+      await getGameFromApi(i_Game)
         .then(data => {
           return data;
         })
@@ -185,33 +185,26 @@ class AddGame extends Component {
 
           return convertedGame;
         })
+        .then(game => {
+          if (myGameList !== undefined && myGameList.length > 0) {
+            myGameList.unshift(game);
+          } else {
+            myGameList = [game];
+          }
+
+          this.props.updateGames(username, myGameList);
+          window.alert(`${game.name} has been added to your backlog`);
+        })
         .catch(err => {
           console.log(err);
         });
-
-      if (myGameList !== undefined && myGameList.length > 0) {
-        myGameList.unshift(game);
-      } else {
-        myGameList = [game];
-      }
-
-      this.props.updateGames(username, myGameList);
     }
   };
-
-  // handleClose = () => {
-  //   this.props.history.push("/my-backlog");
-  // };
 
   renderSearchContainer = () => {
     if (this.state.searchVisible) {
       return (
         <React.Fragment>
-          {/* <div className="sub-page-header">
-            <button className="btn link btn-close" onClick={this.handleClose}>
-              Close
-            </button>
-          </div> */}
           <div className="search-container">
             <div className="search">
               <input
@@ -260,16 +253,11 @@ class AddGame extends Component {
   render() {
     return (
       <React.Fragment>
-        {/* <div className="inner-body"> */}
-        {/* <h1 className="page-title">Add Game</h1> */}
-        {/* <div className="main"> */}
         <div className="center-container">
           <h1 className="page-title page-title-sml">Add Game</h1>
           {this.renderSearchContainer()}
           {this.renderItems()}
         </div>
-        {/* </div>
-        </div> */}
       </React.Fragment>
     );
   }

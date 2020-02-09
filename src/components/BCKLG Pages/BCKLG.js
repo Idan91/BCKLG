@@ -64,15 +64,19 @@ class BCKLG extends Component {
 
     const myGameList = games;
 
-    const newGameList = myGameList.filter(game => {
-      let listGame;
-      if (!(game.name === i_Game.raw.name)) {
-        listGame = game;
-      }
-      return listGame;
-    });
+    try {
+      const newGameList = myGameList.filter(game => {
+        let listGame;
+        if (!(game.name === i_Game.raw.name)) {
+          listGame = game;
+        }
+        return listGame;
+      });
 
-    this.props.updateGames(username, newGameList);
+      this.props.updateGames(username, newGameList);
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   loadUserDataFromProps = () => {
@@ -110,15 +114,12 @@ class BCKLG extends Component {
   };
 
   renderBacklog = () => {
-    const { games, loading, authenticated } = loadUserDataFromProps(this.props);
+    const { user, games, loading, authenticated } = loadUserDataFromProps(
+      this.props
+    );
 
     setTimeout(() => {
-      const fetchedGames = loadUserDataFromProps(this.props).games;
-
-      if (
-        !this.state.fetchFailed &&
-        (fetchedGames === null || fetchedGames === undefined)
-      ) {
+      if (!user) {
         window.alert(
           "Could not authenticate/retrieve user data. Please log in again"
         );

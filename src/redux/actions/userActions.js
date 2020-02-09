@@ -26,35 +26,6 @@ export const loginUser = (userData, history) => dispatch => {
     });
 };
 
-// export const signInWithFacebook = history => dispatch => {
-//   const provider = new firebase.auth.FacebookAuthProvider();
-
-//   firebase
-//     .auth()
-//     .signInWithPopup(provider)
-//     .then(result => {
-//       const token = result.credential.accessToken;
-//       const user = result.user;
-
-//       console.log("reuslt", result);
-
-//       return { token, user };
-//     })
-//     .then(data => {
-//       const { token, user } = data;
-
-//       console.log("data", data);
-
-//       setAuthrizationHeader(token);
-//       dispatch(getUserData());
-//       dispatch({ type: CLEAR_ERRORS });
-//       history.push("/my-backlog");
-//     })
-//     .catch(err => {
-//       console.error(err);
-//     });
-// };
-
 export const signupUser = (newUserData, history) => dispatch => {
   dispatch({ type: LOADING_UI });
   axios
