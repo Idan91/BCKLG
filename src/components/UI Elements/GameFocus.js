@@ -6,7 +6,6 @@ class GameFocus extends Component {
   state = {
     selectedPlatform: "",
     selectedStatus: "",
-
     platformButtonClasses: "focus-button focus-platform",
     statusButtonClasses: "focus-button focus-status",
     selectedButtonClass: "focus-button-selected",
